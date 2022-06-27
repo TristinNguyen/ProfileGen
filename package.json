@@ -1,6 +1,28 @@
 {
   "dependencies": {
-    "inquirer": "^8.2.4",
-    "jest": "^28.1.1"
-  }
+    "axios": "^0.27.2",
+    "inquirer": "^9.0.0",
+    "jest": "^28.1.1",
+    "path": "^0.12.7"
+  },
+  "name": "profilegen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TristinNguyen/ProfileGen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TristinNguyen/ProfileGen/issues"
+  },
+  "homepage": "https://github.com/TristinNguyen/ProfileGen#readme",
+  "description": ""
 }

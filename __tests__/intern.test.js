@@ -1,27 +1,25 @@
-const {Employee, Manager, Engineer, Intern} = require('../employee');
+const Employee = require('../lib/Employee');
+const Intern = require('../lib/Intern');
 
-describe('Intern', () => {
-    it('should create an object with a name, id, email, school, and role', () => {
-        const intern = new Intern('Jen', 4, 'jen@gmail.com', 'MSU', 'intern');
+test('creates an intern object', () => {
+    const intern = new Intern('Minnie');
+});
 
-        expect(intern.getName()).toEqual('Jen');
-        expect(intern.getId()).toEqual(4);
-        expect(intern.getEmail()).toEqual('jen@gmail.com');
-        expect(intern.getSchool()).toEqual('MSU')
-        expect(intern.getRole()).toEqual('Intern');
-    })
+test('set school with constructor', () => {
+    const testValue = 'Harvard';
+    const e = new Intern('Foo', 1, 'intern@email.com', testValue);
+    expect(e.school).toBe(testValue);
+});
 
-    // it('should throw an error if nothing is entered for their name, email, and role', () => {
-    //     const a = new Intern('');
-    //     const err = new Error ('Name, email,school, and role need to be provided')
+test('get school with getSchool() method', () => {
+    const testValue = 'Harvard';
+    const e = new Intern('Foo', 1, 'intern@email.com', testValue);
+    expect(e.getSchool()).toBe(testValue);
+});
 
-    //     expect(a).toThrowError(err);
-    // })
-
-    // it('should throw an error if no number or a negative number is entered for the id', () => {
-    //     const b = new Employee('Jen, -4, jen@gmail.com, intern');
-    //     const err = new Error ('Positive integer needed for id')
-
-    //     expect(b).toThrowError(err);
-    // })
-})
+// Test if the getRole() value is Intern
+test('getRole() return Intern', () => {
+    const testValue = 'Intern';
+    const e = new Intern('Foo', 1, 'intern@email.com', 'Harvard');
+    expect(e.getRole()).toBe(testValue);
+});
